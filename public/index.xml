@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Log</title>
+    <link>/</link>
+    <description>Recent content in Home on Log</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>/blog/my-first-post/</link>
+      <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
+      <guid>/blog/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/about/</guid>
+      <description>&lt;h2 id=&#34;this-website&#34;&gt;This website&lt;/h2&gt;&#xA;&lt;p&gt;This website is inspired by &lt;a href=&#34;https://bearblog.dev&#34;&gt;Bear blog&lt;/a&gt;. We believe that there is a &amp;ldquo;website obesity crisis.&amp;rdquo; Bloated websites are full of scripts, ads, and trackers slowing us down, diverting our attention, and distracting our focus.&lt;/p&gt;&#xA;&lt;p&gt;This website is the opposite. It is small &amp;mdash; each pageload is just ~5kb, about 50,000 times smaller than a vertical video &amp;mdash; and focused on exactly one thing: information flow. The website contains no scripts, trackers, cookies or snooping analytics.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
