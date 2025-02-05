@@ -2,24 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Log</title>
-    <link>/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content in Home on Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Feb 2025 10:28:44 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes for February 2, 2025</title>
+      <link>//localhost:1313/notes/2025-02-05/</link>
+      <pubDate>Wed, 05 Feb 2025 10:28:44 -0500</pubDate>
+      <guid>//localhost:1313/notes/2025-02-05/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Talked with DR about &amp;ldquo;conditional polling&amp;rdquo; idea, and about zip-code level MRP. Can replicate for purposes useful for voter file augmentation and live projection during election-night.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Yuval Levin on Ezra Klein podcast today. Representatives are not responding to public opinion in their districts, but the opinions of a small minority of older voters who watch cable news, and to the opinions of a select few social media influencers that command attention of their younger voters and the representative&amp;rsquo;s social groups. &lt;a href=&#34;https://www.nytimes.com/2025/02/05/opinion/ezra-klein-podcast-yuval-levin.html&#34;&gt;Link to pod&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
-      <link>/blog/my-first-post/</link>
+      <link>//localhost:1313/blog/my-first-post/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
-      <guid>/blog/my-first-post/</guid>
+      <guid>//localhost:1313/blog/my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>&lt;h2 id=&#34;this-website&#34;&gt;This website&lt;/h2&gt;&#xA;&lt;p&gt;This website is inspired by &lt;a href=&#34;https://bearblog.dev&#34;&gt;Bear blog&lt;/a&gt;. We believe that there is a &amp;ldquo;website obesity crisis.&amp;rdquo; Bloated websites are full of scripts, ads, and trackers slowing us down, diverting our attention, and distracting our focus.&lt;/p&gt;&#xA;&lt;p&gt;This website is the opposite. It is small &amp;mdash; each pageload is just ~5kb, about 50,000 times smaller than a vertical video &amp;mdash; and focused on exactly one thing: information flow. The website contains no scripts, trackers, cookies or snooping analytics.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Log</title>
+    <link>//localhost:1313/notes/</link>
+    <description>Recent content in Notes on Log</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Feb 2025 10:28:44 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes for February 2, 2025</title>
+      <link>//localhost:1313/notes/2025-02-05/</link>
+      <pubDate>Wed, 05 Feb 2025 10:28:44 -0500</pubDate>
+      <guid>//localhost:1313/notes/2025-02-05/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Talked with DR about &amp;ldquo;conditional polling&amp;rdquo; idea, and about zip-code level MRP. Can replicate for purposes useful for voter file augmentation and live projection during election-night.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Yuval Levin on Ezra Klein podcast today. Representatives are not responding to public opinion in their districts, but the opinions of a small minority of older voters who watch cable news, and to the opinions of a select few social media influencers that command attention of their younger voters and the representative&amp;rsquo;s social groups. &lt;a href=&#34;https://www.nytimes.com/2025/02/05/opinion/ezra-klein-podcast-yuval-levin.html&#34;&gt;Link to pod&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
