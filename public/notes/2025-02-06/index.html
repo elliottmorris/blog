@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log > 2025 02 06</title>
+<meta name="title" content="2025 02 06" />
+<meta name="description" content="
+Started building a latent factor model in Stan that creates an index to predict the value of 1...N trends on each of 1...T days, where data is measured infrequently across time. Latent factor model will handle loadings and correlations across indicators to avoid over-indexing on all certain variables. We can extract the factor loadings and rescale them to present them as weights (that is not exactly what they are.)
+
+stan code for this:" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="//localhost:1313/notes/2025-02-06/">
+  <meta property="og:site_name" content="Log">
+  <meta property="og:title" content="2025 02 06">
+  <meta property="og:description" content="Started building a latent factor model in Stan that creates an index to predict the value of 1...N trends on each of 1...T days, where data is measured infrequently across time. Latent factor model will handle loadings and correlations across indicators to avoid over-indexing on all certain variables. We can extract the factor loadings and rescale them to present them as weights (that is not exactly what they are.) stan code for this:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="notes">
+    <meta property="article:published_time" content="2025-02-06T12:23:20-05:00">
+    <meta property="article:modified_time" content="2025-02-06T12:23:20-05:00">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="2025 02 06">
+  <meta name="twitter:description" content="Started building a latent factor model in Stan that creates an index to predict the value of 1...N trends on each of 1...T days, where data is measured infrequently across time. Latent factor model will handle loadings and correlations across indicators to avoid over-indexing on all certain variables. We can extract the factor loadings and rescale them to present them as weights (that is not exactly what they are.) stan code for this:">
+
+
+
+
+  <meta itemprop="name" content="2025 02 06">
+  <meta itemprop="description" content="Started building a latent factor model in Stan that creates an index to predict the value of 1...N trends on each of 1...T days, where data is measured infrequently across time. Latent factor model will handle loadings and correlations across indicators to avoid over-indexing on all certain variables. We can extract the factor loadings and rescale them to present them as weights (that is not exactly what they are.) stan code for this:">
+  <meta itemprop="datePublished" content="2025-02-06T12:23:20-05:00">
+  <meta itemprop="dateModified" content="2025-02-06T12:23:20-05:00">
+  <meta itemprop="wordCount" content="387">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+      --width: 800px;
+      --font-main: Verdana, sans-serif;
+      --font-secondary: Verdana, sans-serif;
+      --font-scale: 1em;
+      --background-color: #fff;
+      --heading-color: #222;
+      --text-color: #444;
+      --link-color: #3273dc;
+      --visited-color:  #8b6fcb;
+      --code-background-color: #f2f2f2;
+      --code-color: #222;
+      --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --background-color: #333;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #515151;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+      }
+  }
+
+  body {
+      font-family: var(--font-secondary);
+      font-size: var(--font-scale);
+      margin: auto;
+      padding: 20px;
+      max-width: var(--width);
+      text-align: left;
+      background-color: var(--background-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-main);
+      color: var(--heading-color);
+  }
+
+  a {
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline; 
+  }
+
+  nav a {
+      margin-right: 8px;
+  }
+
+  strong, b {
+      color: var(--heading-color);
+  }
+
+  button {
+      margin: 0;
+      cursor: pointer;
+  }
+
+  main {
+      line-height: 1.6;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px dashed;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  code {
+      font-family: monospace;
+      padding: 5px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 1px;
+  }
+
+  blockquote {
+      border-left: 1px solid #999;
+      color: var(--code-color);
+      padding-left: 20px;
+      font-style: italic;
+  }
+
+  footer {
+      padding-bottom: 5px;
+      text-align: center;
+  }
+
+  header {
+      padding-bottom: 5px;
+  }
+
+  .title:hover {
+      text-decoration: none;
+  }
+
+  .inline {
+      width: auto !important;
+  }
+
+  .highlight, .code {
+      padding: 1px 15px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+      list-style-type: none;
+      padding: unset;
+  }
+
+  ul.blog-posts li {
+      display: flex;
+  }
+
+  ul.blog-posts li span {
+      flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+      color: var(--visited-color);
+  }
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h1>Log</h1>
+</a>
+<hr>
+<nav><a href="/">Home</a>
+
+<a href="/about/">About</a>
+
+
+<a href="/blog">Blog</a>
+
+
+<a href="/notes">Notes</a>
+</nav>
+<hr>
+</header>
+  <main>
+
+<content>
+  <ul>
+<li>Started building a latent factor model in Stan that creates an index to predict the value of <code>1...N</code> trends on each of <code>1...T</code> days, where data is measured infrequently across time. Latent factor model will handle loadings and correlations across indicators to avoid over-indexing on all certain variables. We can extract the factor loadings and rescale them to present them as weights (that is <a href="http://www.hawaii.edu/powerkills/UFA.HTM">not exactly what they are</a>.)</li>
+</ul>
+<p>stan code for this:</p>
+<pre tabindex="0"><code>// File: dynamic_factor_model_missing.stan
+data {
+  int&lt;lower=1&gt; T;                  // Number of time points.
+  int&lt;lower=1&gt; N;                  // Number of economic variables.
+  int&lt;lower=0&gt; N_obs;              // Number of observed data points.
+  int&lt;lower=1, upper=T&gt; t_obs[N_obs];  // Time index for each observed data point.
+  int&lt;lower=1, upper=N&gt; i_obs[N_obs];  // Variable index for each observed data point.
+  vector[N_obs] y_obs;             // Observed data for these indices.
+}
+
+parameters {
+  vector[T] f;                     // Latent factor (the index) for each time point.
+  vector[N] mu;                    // Intercepts for each variable.
+  vector[N] lambda;                // Loadings for each variable.
+  real&lt;lower=0&gt; sigma_y;           // Measurement error standard deviation.
+  real&lt;lower=0&gt; sigma_f;           // State noise standard deviation for f.
+  real&lt;lower=-1, upper=1&gt; rho;     // AR(1) coefficient for f.
+}
+
+model {
+  // Priors
+  mu ~ normal(0, 5);
+  lambda ~ normal(0, 1);
+  sigma_y ~ cauchy(0, 2.5);
+  sigma_f ~ cauchy(0, 2.5);
+  rho ~ uniform(-1, 1);
+
+  // Latent factor evolution: vectorized AR(1) specification.
+  f[1] ~ normal(0, sigma_f);
+  f[2:T] ~ normal(rho * f[1:(T-1)], sigma_f);
+
+  // Observation model: Vectorize by computing the predicted value for each observation.
+  // Note: mu[i_obs] and lambda[i_obs] index the vectors mu and lambda with the observed variable indices.
+  vector[N_obs] y_hat;
+  y_hat = mu[i_obs] + elt_multiply(lambda[i_obs], f[t_obs]);
+  y_obs ~ normal(y_hat, sigma_y);
+}
+</code></pre><p>and the r code would look something like:</p>
+<pre tabindex="0"><code># Suppose y_data is a T x N matrix (with some NA values)
+T = nrow(y_data)
+N = ncol(y_data)
+# Find the indices of non-missing values.
+obs_idx = which(!is.na(y_data), arr.ind = TRUE)
+N_obs = nrow(obs_idx)
+# Note: In R, arr.ind returns a matrix with columns &#34;row&#34; and &#34;col&#34;.
+t_obs = obs_idx[, &#34;row&#34;]
+i_obs = obs_idx[, &#34;col&#34;]
+y_obs = y_data[!is.na(y_data)]
+
+# Bundle data for Stan:
+stan_data = list(
+  T = T,
+  N = N,
+  N_obs = N_obs,
+  t_obs = t_obs,
+  i_obs = i_obs,
+  y_obs = y_obs
+)
+
+# Then compile and sample using rstan as usual:
+library(cmdstanr)
+stan_model = model(file = &#34;dynamic_factor_model_missing.stan&#34;)
+fit = model$sample(stan_model, data = stan_data, iter = 2000, chains = 4)
+print(fit)
+</code></pre>
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer><hr></footer>
+
+    
+</body>
+
+</html>
