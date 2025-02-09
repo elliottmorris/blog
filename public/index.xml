@@ -6,22 +6,8 @@
     <description>Recent content in Home on Log</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Feb 2025 12:23:20 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2025 02 06</title>
-      <link>//localhost:1313/notes/2025-02-06/</link>
-      <pubDate>Thu, 06 Feb 2025 12:23:20 -0500</pubDate>
-      <guid>//localhost:1313/notes/2025-02-06/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Started building a latent factor model in Stan that creates an index to predict the value of &lt;code&gt;1...N&lt;/code&gt; trends on each of &lt;code&gt;1...T&lt;/code&gt; days, where data is measured infrequently across time. Latent factor model will handle loadings and correlations across indicators to avoid over-indexing on all certain variables. We can extract the factor loadings and rescale them to present them as weights (that is &lt;a href=&#34;http://www.hawaii.edu/powerkills/UFA.HTM&#34;&gt;not exactly what they are&lt;/a&gt;.)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;stan code for this:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>2025 02 05</title>
-      <link>//localhost:1313/notes/2025-02-05/</link>
-      <pubDate>Wed, 05 Feb 2025 10:28:44 -0500</pubDate>
-      <guid>//localhost:1313/notes/2025-02-05/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Talked with DR about &amp;ldquo;conditional polling&amp;rdquo; idea, and about zip-code level MRP. Can replicate for purposes useful for voter file augmentation and live projection during election-night.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Yuval Levin on Ezra Klein podcast today. Representatives are not responding to public opinion in their districts, but the opinions of a small minority of older voters who watch cable news, and to the opinions of a select few social media influencers that command attention of their younger voters and the representative&amp;rsquo;s social groups. &lt;a href=&#34;https://www.nytimes.com/2025/02/05/opinion/ezra-klein-podcast-yuval-levin.html&#34;&gt;Link to pod&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>My First Post</title>
       <link>//localhost:1313/blog/my-first-post/</link>
